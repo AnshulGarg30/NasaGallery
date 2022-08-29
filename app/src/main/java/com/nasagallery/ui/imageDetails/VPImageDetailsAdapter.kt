@@ -29,7 +29,6 @@ class VPImageDetailsAdapter(
 
     override fun onBindViewHolder(holder: VPImageDetailsViewHolder, position: Int) {
         Glide.with(holder.itemView).load(images[position].url).centerCrop()
-            .placeholder(R.drawable.loading)
             .listener( object :RequestListener<Drawable>{
                 override fun onLoadFailed(
                     e: GlideException?,

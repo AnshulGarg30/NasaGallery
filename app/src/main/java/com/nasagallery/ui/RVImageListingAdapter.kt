@@ -51,11 +51,10 @@ class RVImageListingAdapter(
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    holder.binding.pbar.visibility = View.GONE
                     return false;
                 }
 
-            }).placeholder(R.drawable.loading)
+            })
             .into(holder.binding.image)
         holder.binding.tvTitle.text = images[position].title
         holder.binding.tvDate.text = images[position].date.toDisplayFormat()
